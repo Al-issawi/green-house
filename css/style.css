@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Tajawal:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ink: #20382f;
+  --muted: #68766d;
+  --paper: #f7f5ec;
+  --white: #fffefa;
+  --green: #bce8c5;
+  --green-dark: #315b43;
+  --yellow: #f6d86d;
+  --orange: #f5a47d;
+  --lilac: #d9c9f2;
+  --line: rgba(32, 56, 47, .12);
+  --shadow: 0 22px 60px rgba(44, 67, 51, .10);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Tajawal", sans-serif; line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+.section-pad { padding-block: 104px; }
+.announcement { background: var(--green-dark); color: #fff; text-align: center; padding: 7px 16px; font-size: 13px; letter-spacing: .2px; }
+.announcement p { margin: 0; }
+.announcement span { color: var(--yellow); padding-inline: 8px; }
+.site-header { position: sticky; top: 0; z-index: 20; background: rgba(247,245,236,.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+.nav-wrap { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.brand-mark { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 15px 15px 15px 5px; background: var(--green); color: var(--green-dark); font: 800 25px "Baloo Bhaijaan 2", sans-serif; transform: rotate(-5deg); }
+.brand-copy { display: grid; line-height: 1.25; }
+.brand-copy strong { font: 800 18px "Baloo Bhaijaan 2", sans-serif; letter-spacing: .2px; }
+.brand-copy small { color: var(--muted); font-size: 11px; }
+.main-nav { display: flex; align-items: center; gap: clamp(16px, 2.5vw, 34px); font-size: 14px; font-weight: 700; color: #53645a; }
+.main-nav a { transition: color .2s ease; }
+.main-nav a:hover, .text-link:hover { color: #a45f3c; }
+.nav-cta { border: 1px solid var(--ink); border-radius: 999px; padding: 10px 19px; font-size: 13px; font-weight: 800; white-space: nowrap; transition: .2s ease; }
+.nav-cta:hover { background: var(--ink); color: white; }
+.nav-cta span { padding-right: 8px; }
+
+.hero { position: relative; overflow: hidden; padding-top: 76px; padding-bottom: 34px; }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 56px; min-height: 490px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #71836f; font-size: 13px; font-weight: 800; letter-spacing: .2px; }
+.eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: #e99b72; box-shadow: 0 0 0 5px rgba(233,155,114,.16); }
+.hero h1 { font: 800 clamp(48px, 6vw, 76px)/1.18 "Baloo Bhaijaan 2", sans-serif; letter-spacing: -1.5px; margin: 20px 0 14px; }
+.highlight { position: relative; z-index: 0; white-space: nowrap; }
+.highlight::after { content: ""; position: absolute; z-index: -1; height: 18px; inset-inline: 0; bottom: 7px; background: var(--yellow); border-radius: 50% 42% 45% 38%; transform: rotate(-2deg); opacity: .8; }
+.hero-text { max-width: 490px; color: var(--muted); font-size: 17px; line-height: 1.95; margin: 0; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; margin-top: 30px; }
+.button { display: inline-flex; justify-content: center; align-items: center; gap: 18px; padding: 14px 23px; border-radius: 12px; font-weight: 800; font-size: 14px; transition: transform .2s ease, box-shadow .2s ease; }
+.button:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(32,56,47,.13); }
+.button-primary { background: var(--green-dark); color: white; }
+.button-primary span, .button-dark span, .button-white span { font-size: 19px; line-height: 1; }
+.text-link { font-weight: 800; font-size: 14px; border-bottom: 1px solid #aab6a9; padding-bottom: 4px; transition: color .2s ease; }
+.text-link span { padding-right: 6px; }
+.hero-note { display: flex; align-items: center; gap: 12px; margin-top: 48px; }
+.note-icon { width: 42px; height: 42px; display: grid; place-items: center; background: #f5dfb0; border-radius: 50%; font-size: 22px; }
+.hero-note p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.hero-note strong { color: var(--ink); font-size: 13px; }
+.hero-art { height: 440px; position: relative; display: grid; place-items: center; isolation: isolate; }
+.art-sun { position: absolute; width: 330px; height: 330px; border-radius: 48% 52% 45% 55%; background: #f4d66d; transform: rotate(13deg); }
+.art-paper { position: absolute; width: 235px; height: 295px; border-radius: 12px 12px 30px 12px; box-shadow: 0 25px 45px rgba(51,73,55,.16); }
+.paper-back { background: #e4c9f2; transform: rotate(13deg) translate(28px, -1px); }
+.paper-front { background: #fffefa; transform: rotate(-7deg) translate(-4px, 7px); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(32,56,47,.08); }
+.paper-front::before { content: ""; position: absolute; inset: 16px; border: 1px dashed #d5d9c8; border-radius: 7px; }
+.paper-scribble { color: #315b43; font: 800 43px/1.15 "Baloo Bhaijaan 2", sans-serif; text-align: center; transform: rotate(-3deg); }
+.paper-star { position: absolute; top: 29px; left: 30px; color: #ed9a70; font-size: 32px; }
+.pencil { position: absolute; width: 18px; height: 205px; border-radius: 8px; z-index: 2; box-shadow: 4px 8px 12px rgba(0,0,0,.12); }
+.pencil::before { content: ""; position: absolute; top: -15px; left: 0; border-left: 9px solid transparent; border-right: 9px solid transparent; border-bottom: 16px solid #d9ad80; }
+.pencil-one { background: #e98965; transform: rotate(37deg); top: 40px; right: 70px; }
+.pencil-two { background: #75b991; transform: rotate(-39deg); bottom: 45px; left: 72px; }
+.paint-palette { position: absolute; z-index: 3; bottom: 35px; right: 65px; width: 108px; height: 82px; background: #fffefa; border: 5px solid #e5b47d; border-radius: 48% 52% 42% 58%; transform: rotate(-15deg); box-shadow: 0 12px 20px rgba(0,0,0,.1); }
+.paint-palette span { position: absolute; width: 19px; height: 19px; border-radius: 50%; }
+.paint-palette span:nth-child(1) { background: #e98568; top: 9px; right: 16px; }
+.paint-palette span:nth-child(2) { background: #8abf9b; top: 34px; right: 10px; }
+.paint-palette span:nth-child(3) { background: #eacb62; top: 42px; left: 19px; }
+.paint-palette span:nth-child(4) { background: #bca5df; top: 13px; left: 26px; }
+.paint-palette span:nth-child(5) { background: #e7a9b5; top: 27px; left: 48px; }
+.art-flower { position: absolute; top: 37px; left: 65px; color: #e88b6d; font-size: 64px; transform: rotate(15deg); }
+.art-sticker { position: absolute; z-index: 4; background: #fffefa; padding: 10px 17px; border-radius: 8px 18px 8px 18px; font: 700 14px "Baloo Bhaijaan 2", sans-serif; box-shadow: 0 8px 22px rgba(32,56,47,.12); }
+.sticker-top { top: 34px; right: 12px; transform: rotate(7deg); }
+.sticker-bottom { bottom: 25px; left: 5px; background: #d8c9f1; transform: rotate(-8deg); }
+.hero-shape { position: absolute; border: 1px solid rgba(49,91,67,.12); border-radius: 50%; }
+.shape-one { width: 520px; height: 520px; top: -280px; left: -250px; }
+.shape-two { width: 300px; height: 300px; bottom: -220px; right: -130px; }
+.hero-bottom { display: flex; align-items: center; gap: 14px; color: #859184; font-size: 12px; font-weight: 800; padding-top: 15px; }
+.hero-bottom i { width: 5px; height: 5px; border-radius: 50%; background: #e7a27b; }
+
+.trust-strip { background: #eeeee3; border-block: 1px solid rgba(32,56,47,.06); }
+.trust-grid { display: grid; grid-template-columns: repeat(3,1fr); padding-block: 25px; gap: 30px; }
+.trust-grid > div { display: flex; align-items: center; justify-content: center; gap: 13px; }
+.trust-icon { width: 46px; height: 46px; border-radius: 15px; display: grid; place-items: center; font-size: 23px; }
+.mint { background: #d2ead4; }.peach { background: #f7d9c8; }.lilac { background: #e3d8f3; }
+.trust-grid p { display: grid; margin: 0; line-height: 1.5; }
+.trust-grid strong { font-size: 14px; }.trust-grid small { color: var(--muted); font-size: 11px; }
+
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 40px; }
+.section-heading h2, .creative-copy h2, .about h2, .contact h2 { font: 800 clamp(36px,4vw,52px)/1.3 "Baloo Bhaijaan 2", sans-serif; margin: 8px 0 0; letter-spacing: -.5px; }
+.section-heading > p { color: var(--muted); margin: 0 0 8px; }
+.category-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.category-card { border-radius: 20px; overflow: hidden; border: 1px solid rgba(32,56,47,.07); transition: transform .25s ease, box-shadow .25s ease; }
+.category-card:hover { transform: translateY(-7px); box-shadow: var(--shadow); }
+.card-green { background: #e0efdf; }.card-yellow { background: #f8edc9; }.card-lilac { background: #e9e0f4; }
+.category-visual { height: 210px; position: relative; display: grid; place-items: center; overflow: hidden; }
+.category-visual::before { content: ""; width: 150px; height: 150px; position: absolute; border-radius: 48% 52% 61% 39%; background: rgba(255,255,255,.42); transform: rotate(23deg); }
+.visual-emoji { position: relative; z-index: 1; font-size: 83px; filter: drop-shadow(0 15px 12px rgba(43,61,43,.12)); transform: rotate(-8deg); }
+.visual-spark { position: absolute; font-size: 40px; color: rgba(49,91,67,.5); top: 28px; left: 35px; }
+.category-info { padding: 22px 25px 25px; }
+.card-number { color: #71836f; font-size: 10px; font-weight: 800; letter-spacing: .7px; }
+.category-info h3 { font: 800 22px "Baloo Bhaijaan 2", sans-serif; margin: 8px 0 5px; }
+.category-info p { color: #66766b; font-size: 13px; min-height: 45px; margin: 0 0 17px; }
+.card-link { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(32,56,47,.13); padding-top: 14px; font-size: 12px; font-weight: 800; }
+.card-link span { font-size: 18px; }
+
+.creative-section { background: #f0eee4; overflow: hidden; }
+.creative-grid { display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 90px; }
+.creative-art { height: 390px; position: relative; display: grid; place-items: center; }
+.creative-circle { width: 290px; height: 290px; background: #cce6cb; border-radius: 50% 45% 53% 47%; transform: rotate(-13deg); }
+.creative-tile { position: absolute; width: 145px; height: 145px; display: grid; place-items: center; border-radius: 22px; color: white; font: 800 30px "Baloo Bhaijaan 2", sans-serif; box-shadow: 0 18px 30px rgba(42,59,45,.15); }
+.tile-orange { background: #e99772; top: 22px; right: 32px; transform: rotate(10deg); }
+.tile-purple { background: #a995ce; bottom: 30px; right: 80px; transform: rotate(-8deg); }
+.tile-green { background: #658c70; top: 105px; left: 20px; transform: rotate(-12deg); }
+.creative-doodle { position: absolute; font-size: 58px; color: #d99a65; }
+.doodle-one { top: 2px; left: 65px; }.doodle-two { bottom: 5px; left: 10px; color: #a995ce; }
+.creative-copy > p { color: var(--muted); line-height: 2; max-width: 510px; margin: 18px 0 20px; }
+.service-list { list-style: none; padding: 0; margin: 0 0 27px; display: grid; gap: 10px; font-size: 14px; font-weight: 700; }
+.service-list li { display: flex; align-items: center; gap: 10px; }
+.service-list span { width: 22px; height: 22px; display: grid; place-items: center; background: #d3e9d2; border-radius: 50%; color: #315b43; font-size: 12px; }
+.button-dark { background: var(--ink); color: white; }
+
+.offers { padding-top: 90px; padding-bottom: 90px; }
+.offer-banner { min-height: 330px; border-radius: 25px; background: #315b43; color: white; padding: 48px 58px; display: flex; align-items: center; justify-content: space-between; overflow: hidden; position: relative; }
+.eyebrow-light { color: #d7e7d3; }
+.offer-copy { position: relative; z-index: 2; }
+.offer-copy h2 { font: 800 43px/1.25 "Baloo Bhaijaan 2", sans-serif; margin: 10px 0; }
+.offer-copy p { color: #d7e2d6; margin: 0 0 22px; font-size: 14px; }
+.button-white { background: #fffefa; color: var(--ink); }
+.offer-art { width: 390px; height: 260px; position: relative; }
+.offer-burst { position: absolute; top: 28px; right: 90px; width: 190px; height: 190px; background: var(--yellow); color: var(--ink); border-radius: 42% 58% 48% 52%; display: grid; align-content: center; justify-content: center; text-align: center; font: 700 23px/1.25 "Baloo Bhaijaan 2",sans-serif; transform: rotate(9deg); box-shadow: 0 20px 35px rgba(0,0,0,.14); }
+.offer-burst b { font-size: 35px; }
+.offer-pencil { position: absolute; color: #f3a17b; font-size: 110px; top: 72px; left: 0; transform: rotate(-25deg); }
+.offer-star { position: absolute; color: #d9c9f2; font-size: 60px; top: 0; right: 22px; }
+.offer-flower { position: absolute; color: #f3a17b; font-size: 70px; bottom: 0; right: 8px; }
+
+.about { background: #fffefa; }
+.about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; align-items: start; }
+.about-text { padding-top: 12px; }
+.about-text p { color: var(--muted); line-height: 2; margin: 0 0 15px; }
+.about-signature { display: inline-block; margin-top: 10px; font: 700 18px "Baloo Bhaijaan 2", sans-serif; color: var(--green-dark); }
+.about-signature b { color: #e99b72; padding-right: 8px; }
+
+.contact { padding-block: 85px; }
+.contact-card { position: relative; overflow: hidden; background: #f1e7d5; border-radius: 24px; padding: 48px 55px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.contact-card h2 { font-size: 39px; }
+.contact-card p { color: var(--muted); margin: 10px 0 0; }
+.contact-actions { position: relative; z-index: 2; display: grid; justify-items: start; gap: 17px; }
+.contact-decoration { position: absolute; left: 20px; bottom: -45px; font-size: 190px; color: rgba(233,155,114,.2); transform: rotate(20deg); }
+
+.site-footer { background: #20382f; color: white; padding-block: 25px; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.footer-brand .brand-mark { background: #c5e7c7; }
+.footer-brand .brand-copy small { color: #c1d0c2; }
+.footer-inner > p, .copyright { color: #c1d0c2; font-size: 12px; margin: 0; }
+
+:focus-visible { outline: 3px solid #d57e56; outline-offset: 4px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+
+@media (max-width: 900px) {
+  .main-nav { gap: 14px; font-size: 12px; }
+  .hero-grid { gap: 20px; }
+  .hero-art { transform: scale(.9); }
+  .creative-grid { gap: 35px; }
+  .about-grid { gap: 50px; }
+  .contact-card { padding: 40px; }
+}
+@media (max-width: 700px) {
+  .container { width: min(100% - 34px, 540px); }
+  .section-pad { padding-block: 70px; }
+  .nav-wrap { min-height: 72px; flex-wrap: wrap; padding-block: 12px; gap: 12px; }
+  .main-nav { order: 3; width: 100%; overflow-x: auto; justify-content: flex-start; padding: 4px 0 8px; white-space: nowrap; scrollbar-width: thin; }
+  .nav-cta { margin-inline-start: auto; padding: 8px 13px; }
+  .hero { padding-top: 55px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 5px; }
+  .hero h1 { font-size: clamp(47px, 13vw, 64px); }
+  .hero-text { font-size: 15px; }
+  .hero-art { height: 350px; transform: scale(.82); transform-origin: center top; margin-bottom: -45px; }
+  .hero-note { margin-top: 30px; }
+  .hero-bottom { padding-top: 8px; }
+  .trust-grid { grid-template-columns: 1fr; gap: 18px; padding-block: 25px; }
+  .trust-grid > div { justify-content: flex-start; }
+  .section-heading { display: block; margin-bottom: 28px; }
+  .section-heading > p { margin-top: 10px; }
+  .category-grid { grid-template-columns: 1fr; gap: 17px; }
+  .category-visual { height: 185px; }
+  .category-info p { min-height: 0; }
+  .creative-grid { grid-template-columns: 1fr; gap: 18px; }
+  .creative-art { height: 310px; transform: scale(.85); margin-block: -20px; }
+  .creative-copy h2 { font-size: 42px; }
+  .offer-banner { padding: 35px 28px; min-height: 0; display: block; }
+  .offer-copy h2 { font-size: 37px; }
+  .offer-art { width: 100%; height: 220px; margin-top: 10px; transform: scale(.85); transform-origin: center top; }
+  .offer-burst { right: calc(50% - 95px); }
+  .offer-pencil { left: 4%; }
+  .about-grid { grid-template-columns: 1fr; gap: 15px; }
+  .contact-card { display: block; padding: 34px 25px; }
+  .contact-card h2 { font-size: 34px; }
+  .contact-actions { margin-top: 25px; }
+  .contact-decoration { left: -20px; bottom: -70px; }
+  .footer-inner { flex-wrap: wrap; }
+  .footer-inner > p { order: 3; width: 100%; }
+}
+@media (max-width: 360px) {
+  .hero-art { margin-inline: -20px; transform: scale(.72); transform-origin: center top; margin-bottom: -85px; }
+  .hero-actions { gap: 17px; }
+  .button { padding: 12px 16px; }
+  .creative-tile { width: 120px; height: 120px; }
+}
